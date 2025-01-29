@@ -17,17 +17,3 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
----        
-kind: Service
-apiVersion: v1
-metadata:
-  name: nginx
-  labels:
-    app: nginx
-spec:
-  ports:
-    - port: 80
-  selector:
-    app: nginx
-    tier: frontend
-  type: LoadBalancer
